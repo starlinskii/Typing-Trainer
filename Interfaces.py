@@ -10,7 +10,6 @@ class Interface:
     def __init__(self):
         print('init')
         self.fld = Field()
-        self.Renew()
     
     def Renew(self):
         self.fld.txt = random.choice(src.Texts)
@@ -52,6 +51,9 @@ class Interface:
     def Tick(self):
         self.fld.seconds += 1
         self.fld.timer.configure(text=f'{self.fld.seconds} Seconds')
+
+        if self.fld.mutex:
+            self.fld.program.after(1000, self.Tick)
     
     def Restart(self):
         print('try to restart')
