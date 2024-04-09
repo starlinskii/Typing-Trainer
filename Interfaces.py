@@ -8,7 +8,6 @@ class Interface:
     fld : Field
 
     def __init__(self):
-        print('init')
         self.fld = Field()
     
     def Renew(self):
@@ -56,20 +55,14 @@ class Interface:
             self.fld.program.after(1000, self.Tick)
     
     def Restart(self):
-        print('try to restart')
         self.fld.speed.destroy()
-        print('ok')
         self.fld.restarter.destroy()
-        print('ok')
         self.Reset()
-        print('after reset')
 
     def Reset(self):
         self.Renew()
-        print('out reset')
     
     def keyPress(self, event=None):
-        print(event.char)
         try:
             if event.char == self.fld.black_text.cget('text')[0]:
                 if len(self.fld.black_text.cget('text')) == 1:
