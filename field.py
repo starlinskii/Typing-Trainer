@@ -1,14 +1,4 @@
 from dataclasses import dataclass
-from enum import Enum
-from collections import namedtuple
-from random import seed, shuffle
-from itertools import product
-import random
-import copy
-from itertools import product
-from tkinter import *
-import ctypes
-import random
 import tkinter
 import Sources as src
 
@@ -20,7 +10,7 @@ class Field:
 
     def __init__(self):
         #создали новый ткинтэр
-        self.program = Tk()
+        self.program = tkinter.Tk()
         #заголовок, размер окна, шрифт
         self.program.title('Type Speed Test')
         self.program.geometry('700x700')

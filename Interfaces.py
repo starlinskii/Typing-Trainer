@@ -1,5 +1,5 @@
 from field import Field
-from tkinter import *
+from tkinter import Label, E, W, N, S, Button, CENTER, TclError
 import random
 import Sources as src
 
