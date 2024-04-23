@@ -1,6 +1,5 @@
 from dataclasses import dataclass
 import tkinter
-import Sources as src
 
 @dataclass
 class Field:
@@ -16,4 +15,3 @@ class Field:
         self.program.geometry('700x700')
         self.program.option_add("*Label.Font", "consolas 30")
         self.program.option_add("*Button.Font", "consolas 30")
-

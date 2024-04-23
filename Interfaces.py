@@ -48,11 +48,11 @@ class Interface:
         self.fld.restarter.place(relx=0.5, rely=0.6, anchor=CENTER)
         
     def Tick(self):
+        if not self.fld.mutex:
+            return
         self.fld.seconds += 1
         self.fld.timer.configure(text=f'{self.fld.seconds} Seconds')
-
-        if self.fld.mutex:
-            self.fld.program.after(1000, self.Tick)
+        self.fld.program.after(1000, self.Tick)
     
     def Restart(self):
         self.fld.speed.destroy()
